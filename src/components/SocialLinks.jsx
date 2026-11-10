@@ -36,10 +36,10 @@ export default function SocialLinks({ dark = false, iconSize = 'w-5 h-5' }) {
             <span
               key={link.name}
               title={`${link.name} (Configure in personal.js)`}
-              className={`inline-flex items-center justify-center w-10 h-10 rounded-xl transition-all cursor-not-allowed opacity-40 border ${
+              className={`inline-flex items-center justify-center w-10 h-10 rounded-xl transition-all cursor-not-allowed opacity-35 border ${
                 dark
-                  ? 'bg-slate-800/40 border-slate-700/50 text-slate-400'
-                  : 'bg-slate-100 border-slate-200 text-slate-400'
+                  ? 'bg-zinc-900/60 border-zinc-800 text-zinc-500'
+                  : 'bg-zinc-100 border-zinc-200 text-zinc-400'
               }`}
             >
               <Icon className={iconSize} />
@@ -55,10 +55,10 @@ export default function SocialLinks({ dark = false, iconSize = 'w-5 h-5' }) {
             target={link.name !== 'Email' ? '_blank' : undefined}
             rel={link.name !== 'Email' ? 'noopener noreferrer' : undefined}
             aria-label={link.label}
-            className={`inline-flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 border focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`inline-flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 border focus:outline-none focus:ring-2 focus:ring-[#c6f432] ${
               dark
-                ? 'bg-slate-900/60 hover:bg-slate-800 border-slate-800 hover:border-slate-700 text-slate-300 hover:text-cyan-400 hover:-translate-y-0.5'
-                : 'bg-white hover:bg-slate-50 border-slate-200 hover:border-slate-300 text-slate-700 hover:text-blue-600 hover:-translate-y-0.5 shadow-xs'
+                ? 'bg-zinc-900/90 hover:bg-zinc-800 border-zinc-800 hover:border-[#c6f432]/60 text-zinc-300 hover:text-[#c6f432] hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(198,244,50,0.2)]'
+                : 'bg-white hover:bg-zinc-50 border-zinc-200 hover:border-[#0b0b0c] text-zinc-700 hover:text-[#0b0b0c] hover:-translate-y-0.5 shadow-xs'
             }`}
           >
             <Icon className={iconSize} />

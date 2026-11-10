@@ -1,6 +1,6 @@
 # CHOLLETI VENU MADHUR — Developer Portfolio
 
-A bespoke, recruiter-focused portfolio engineered for **CHOLLETI VENU MADHUR** (Software Developer | AI & Machine Learning Enthusiast, Class of 2026). Built using modern React 19, Tailwind CSS v4, Motion for React, and Lucide React with an intentional **Hybrid Creative Direction** (dramatic dark hero transitioning into a spacious, editorial-style light interface).
+A bespoke, recruiter-focused portfolio engineered for **CHOLLETI VENU MADHUR** (Software Developer | AI & Machine Learning Enthusiast, Class of 2026). Built using modern React 19, Tailwind CSS v4, Motion for React, and Lucide React with the **Official Brand Palette** (40% Primary Black `#0b0b0c`, 40% Pure White `#ffffff`, 20% Electric Lime Green `#c6f432`) inspired by high-end editorial websites and modern creative developer portfolios.
 
 ---
 
@@ -153,7 +153,7 @@ vercel
 | 1 | Website works on a public URL | 🟡 Pending | Ready to deploy to Vercel/Netlify |
 | 2 | Professional portfolio URL containing candidate's name | 🟡 Pending | Configure domain during Vercel setup (e.g., `venumadhur.dev` or `cholletivenumadhur.vercel.app`) |
 | 3 | Responsive on phone, tablet, and laptop | ✅ Completed | Tested across 375px, 768px, 1024px, 1280px+ viewports |
-| 4 | At least 3 consistent colors & 1 font system used across sections | ✅ Completed | Deep Navy (`#08111F`), Electric Blue (`#3B82F6`), Cyan (`#22D3EE`), Light Surface (`#F8FAFC`); Space Grotesk + Inter |
+| 4 | At least 3 consistent colors & 1 font system used across sections | ✅ Completed | Primary Black (`#0b0b0c` - 40%), Pure White (`#ffffff` - 40%), Electric Lime Green (`#c6f432` - 20%); Space Grotesk + Inter |
 | 5 | Home, About Me, Skills, Projects, Contact, and Resume links in Navbar | ✅ Completed | All 6 section targets + Resume trigger implemented |
 | 6 | Responsive navigation | ✅ Completed | Desktop menu + animated mobile drawer |
 | 7 | Sticky or fixed navbar | ✅ Completed | Fixed navbar with scroll-triggered backdrop blur |

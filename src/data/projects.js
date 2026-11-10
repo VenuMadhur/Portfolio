@@ -19,12 +19,11 @@ export const projectsData = [
     technologies: ["Python", "FastAPI", "React", "Machine Learning", "SQLite"],
     category: "AI / Healthcare",
     featured: true,
-    // Links: Leave empty if pending; UI renders a clear "Source Pending" or "Demo Pending" state
     githubUrl: "",
     demoUrl: "",
     videoUrl: "",
-    themeColor: "from-blue-600/20 to-cyan-500/10",
-    accentColor: "#3B82F6",
+    themeColor: "from-zinc-900 to-[#0b0b0c]",
+    accentColor: "#c6f432",
     mockupType: "vital-dashboard"
   },
   {
@@ -42,8 +41,8 @@ export const projectsData = [
     githubUrl: "",
     demoUrl: "",
     videoUrl: "",
-    themeColor: "from-indigo-600/20 to-purple-500/10",
-    accentColor: "#6366F1",
+    themeColor: "from-zinc-900 to-[#0b0b0c]",
+    accentColor: "#c6f432",
     mockupType: "code-editor"
   },
   {
@@ -61,8 +60,8 @@ export const projectsData = [
     githubUrl: "",
     demoUrl: "",
     videoUrl: "",
-    themeColor: "from-emerald-600/20 to-teal-500/10",
-    accentColor: "#10B981",
+    themeColor: "from-zinc-900 to-[#0b0b0c]",
+    accentColor: "#c6f432",
     mockupType: "records-table"
   },
   {
@@ -80,8 +79,8 @@ export const projectsData = [
     githubUrl: "",
     demoUrl: "",
     videoUrl: "",
-    themeColor: "from-cyan-600/20 to-blue-500/10",
-    accentColor: "#06B6D4",
+    themeColor: "from-zinc-900 to-[#0b0b0c]",
+    accentColor: "#c6f432",
     mockupType: "federated-nodes"
   }
 ];

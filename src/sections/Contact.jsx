@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, AlertCircle, Clock } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from '../components/BrandIcons';
 import { personalData } from '../data/personal';
 import SectionHeading from '../components/SectionHeading';
@@ -66,7 +66,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#F8FAFC] text-slate-900 border-t border-slate-200">
+    <section id="contact" className="py-24 bg-[#ffffff] text-[#0b0b0c] border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -82,11 +82,11 @@ export default function Contact() {
           
           {/* Left Column: Direct Contact Info & Professional Profiles */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm">
-              <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">
+            <div className="bg-[#ffffff] rounded-3xl p-6 sm:p-8 border border-zinc-200 shadow-sm">
+              <h3 className="font-heading font-bold text-xl text-[#0b0b0c] mb-2">
                 Contact Information
               </h3>
-              <p className="text-sm text-slate-600 mb-8 leading-relaxed">
+              <p className="text-sm text-zinc-600 mb-8 leading-relaxed">
                 Feel free to reach out directly via email, phone, or connect on LinkedIn and GitHub.
               </p>
 
@@ -94,46 +94,46 @@ export default function Contact() {
                 {/* Email Item */}
                 <a
                   href={`mailto:${personalData.email}`}
-                  className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-300 hover:bg-blue-50/40 transition-all duration-200 group"
+                  className="flex items-start gap-4 p-4 rounded-2xl bg-zinc-50 border border-zinc-200/80 hover:border-[#0b0b0c] transition-all duration-200 group"
                 >
-                  <div className="p-3 rounded-xl bg-blue-100 text-blue-700 shrink-0 group-hover:scale-105 transition-transform">
+                  <div className="p-3 rounded-xl bg-[#0b0b0c] text-[#c6f432] shrink-0 group-hover:scale-105 transition-transform">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block">
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 block">
                       Direct Email
                     </span>
-                    <span className="font-semibold text-slate-900 text-sm group-hover:text-blue-600 transition-colors break-all">
+                    <span className="font-bold text-[#0b0b0c] text-sm transition-colors break-all">
                       {personalData.email}
                     </span>
                   </div>
                 </a>
 
                 {/* Phone Item */}
-                <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                  <div className="p-3 rounded-xl bg-cyan-100 text-cyan-800 shrink-0">
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-zinc-50 border border-zinc-200/80">
+                  <div className="p-3 rounded-xl bg-[#0b0b0c] text-white shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block">
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 block">
                       Phone Number
                     </span>
-                    <span className="font-semibold text-slate-900 text-sm">
+                    <span className="font-bold text-[#0b0b0c] text-sm">
                       {personalData.phone}
                     </span>
                   </div>
                 </div>
 
                 {/* Location Item */}
-                <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                  <div className="p-3 rounded-xl bg-indigo-100 text-indigo-700 shrink-0">
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-zinc-50 border border-zinc-200/80">
+                  <div className="p-3 rounded-xl bg-[#0b0b0c] text-[#c6f432] shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block">
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 block">
                       Location
                     </span>
-                    <span className="font-semibold text-slate-900 text-sm">
+                    <span className="font-bold text-[#0b0b0c] text-sm">
                       {personalData.location}
                     </span>
                   </div>
@@ -141,8 +141,8 @@ export default function Contact() {
               </div>
 
               {/* Social Channels */}
-              <div className="mt-8 pt-6 border-t border-slate-100">
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-3">
+              <div className="mt-8 pt-6 border-t border-zinc-100">
+                <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-3">
                   Professional Profiles
                 </span>
                 <div className="flex items-center gap-3">
@@ -151,9 +151,9 @@ export default function Contact() {
                       href={personalData.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-700 text-xs font-semibold border border-slate-200 transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-100 hover:bg-[#0b0b0c] text-[#0b0b0c] hover:text-[#c6f432] text-xs font-bold border border-zinc-200 transition-all"
                     >
-                      <LinkedinIcon className="w-4 h-4 text-blue-600" />
+                      <LinkedinIcon className="w-4 h-4" />
                       <span>LinkedIn</span>
                     </a>
                   )}
@@ -163,7 +163,7 @@ export default function Contact() {
                       href={personalData.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 text-xs font-semibold border border-slate-200 transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-100 hover:bg-[#0b0b0c] text-[#0b0b0c] hover:text-[#c6f432] text-xs font-bold border border-zinc-200 transition-all"
                     >
                       <GithubIcon className="w-4 h-4" />
                       <span>GitHub</span>
@@ -177,12 +177,12 @@ export default function Contact() {
 
           {/* Right Column: Accessible Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm">
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
-                <h3 className="font-heading font-bold text-xl text-slate-900">
+            <div className="bg-[#ffffff] rounded-3xl p-6 sm:p-8 border border-zinc-200 shadow-sm">
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-zinc-100">
+                <h3 className="font-heading font-bold text-xl text-[#0b0b0c]">
                   Send a Direct Message
                 </h3>
-                <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 border border-slate-200">
+                <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-zinc-100 text-zinc-600 font-bold border border-zinc-200">
                   Quick Response
                 </span>
               </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                 
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="contact-name" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="contact-name" className="block text-xs font-bold text-zinc-800 uppercase tracking-wider mb-1.5">
                     Your Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -205,7 +205,7 @@ export default function Contact() {
                     onBlur={() => handleBlur('name')}
                     aria-required="true"
                     aria-describedby="name-desc"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-zinc-300 text-[#0b0b0c] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#c6f432] focus:border-zinc-900 text-sm transition-all"
                   />
                   <span id="name-desc" className="sr-only">Enter your full name</span>
                 </div>
@@ -213,10 +213,10 @@ export default function Contact() {
                 {/* Email Field */}
                 <div>
                   <div className="flex justify-between items-center mb-1.5">
-                    <label htmlFor="contact-email" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider">
+                    <label htmlFor="contact-email" className="block text-xs font-bold text-zinc-800 uppercase tracking-wider">
                       Your Email <span className="text-red-500">*</span>
                     </label>
-                    <span id="email-format-hint" className="text-[11px] text-slate-400 font-mono">
+                    <span id="email-format-hint" className="text-[11px] text-zinc-400 font-mono">
                       Format: you@example.com
                     </span>
                   </div>
@@ -232,13 +232,13 @@ export default function Contact() {
                     onBlur={() => handleBlur('email')}
                     aria-required="true"
                     aria-describedby="email-format-hint"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-zinc-300 text-[#0b0b0c] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#c6f432] focus:border-zinc-900 text-sm transition-all"
                   />
                 </div>
 
                 {/* Subject Field */}
                 <div>
-                  <label htmlFor="contact-subject" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="contact-subject" className="block text-xs font-bold text-zinc-800 uppercase tracking-wider mb-1.5">
                     Subject <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -251,13 +251,13 @@ export default function Contact() {
                     onChange={handleChange}
                     onBlur={() => handleBlur('subject')}
                     aria-required="true"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-zinc-300 text-[#0b0b0c] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#c6f432] focus:border-zinc-900 text-sm transition-all"
                   />
                 </div>
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="contact-message" className="block text-xs font-bold text-zinc-800 uppercase tracking-wider mb-1.5">
                     Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
@@ -270,24 +270,24 @@ export default function Contact() {
                     onChange={handleChange}
                     onBlur={() => handleBlur('message')}
                     aria-required="true"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-xl border border-zinc-300 text-[#0b0b0c] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#c6f432] focus:border-zinc-900 text-sm transition-all resize-y"
                   />
                 </div>
 
-                {/* Submit Action */}
+                {/* Submit Action (Bold Electric Lime Button) */}
                 <button
                   type="submit"
                   disabled={formStatus.submitting}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold text-sm shadow-md shadow-blue-500/20 transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#c6f432] hover:bg-[#b5e526] disabled:bg-zinc-300 text-[#0b0b0c] font-bold text-sm shadow-md hover:shadow-[0_0_20px_rgba(198,244,50,0.35)] transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#c6f432] cursor-pointer"
                 >
                   {formStatus.submitting ? (
                     <>
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <div className="w-4 h-4 border-2 border-[#0b0b0c]/40 border-t-[#0b0b0c] rounded-full animate-spin" />
                       <span>Preparing Message...</span>
                     </>
                   ) : (
                     <>
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4 text-[#0b0b0c]" />
                       <span>Send Message</span>
                     </>
                   )}
@@ -296,13 +296,13 @@ export default function Contact() {
 
               {/* Status Notice */}
               {formStatus.notice && (
-                <div className="mt-5 p-4 rounded-2xl bg-blue-50 border border-blue-200 text-xs text-blue-900 flex items-start gap-3">
-                  <AlertCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <div className="mt-5 p-4 rounded-2xl bg-zinc-50 border border-zinc-200 text-xs text-zinc-800 flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-[#0b0b0c] shrink-0 mt-0.5" />
                   <div>
-                    <h5 className="font-semibold text-blue-950 mb-0.5">
+                    <h5 className="font-bold text-[#0b0b0c] mb-0.5">
                       {formStatus.notice.title}
                     </h5>
-                    <p className="leading-relaxed text-blue-800">
+                    <p className="leading-relaxed text-zinc-600">
                       {formStatus.notice.message}
                     </p>
                   </div>
@@ -310,8 +310,8 @@ export default function Contact() {
               )}
 
               {/* Pending Backend Service Note */}
-              <div className="mt-5 pt-4 border-t border-slate-100 flex items-center gap-2 text-[11px] text-slate-400 font-mono">
-                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <div className="mt-5 pt-4 border-t border-zinc-100 flex items-center gap-2 text-[11px] text-zinc-400 font-mono">
+                <Clock className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
                 <span>Backend endpoint configuration pending (graceful mailto fallback active).</span>
               </div>
 

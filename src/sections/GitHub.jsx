@@ -46,7 +46,7 @@ export default function GitHub() {
   const profileUrl = personalData.githubUrl || (username ? `https://github.com/${username}` : 'https://github.com');
 
   return (
-    <section id="github" className="py-24 bg-white text-slate-900 border-t border-slate-200">
+    <section id="github" className="py-24 bg-[#ffffff] text-[#0b0b0c] border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -60,15 +60,15 @@ export default function GitHub() {
 
         <div className="max-w-4xl mx-auto space-y-8">
           
-          {/* Main GitHub Profile Overview Card */}
-          <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl relative overflow-hidden">
-            {/* Ambient background glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+          {/* Main GitHub Profile Overview Card in Black & Lime */}
+          <div className="bg-[#0b0b0c] text-white rounded-3xl p-6 sm:p-8 border border-zinc-800 shadow-2xl relative overflow-hidden">
+            {/* Ambient Lime Glow */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#c6f432]/6 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-6 border-b border-slate-800 relative z-10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-6 border-b border-zinc-800 relative z-10">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-[1.5px] shadow-lg shadow-blue-500/20 shrink-0">
-                  <div className="w-full h-full rounded-[14px] bg-slate-950 flex items-center justify-center overflow-hidden">
+                <div className="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 p-[1px] shadow-lg shrink-0">
+                  <div className="w-full h-full rounded-[14px] bg-[#0b0b0c] flex items-center justify-center overflow-hidden">
                     {profile?.avatar_url ? (
                       <img
                         src={profile.avatar_url}
@@ -77,7 +77,7 @@ export default function GitHub() {
                         loading="lazy"
                       />
                     ) : (
-                      <GithubIcon className="w-7 h-7 text-white" />
+                      <GithubIcon className="w-7 h-7 text-[#c6f432]" />
                     )}
                   </div>
                 </div>
@@ -87,24 +87,24 @@ export default function GitHub() {
                     <h3 className="font-heading font-bold text-xl text-white">
                       {profile?.name || personalData.fullName}
                     </h3>
-                    <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-blue-500/20 text-cyan-300 border border-blue-500/30">
+                    <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-zinc-900 text-[#c6f432] border border-zinc-800 font-bold">
                       @{username || 'developer'}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-400 mt-1">
+                  <p className="text-xs text-zinc-400 mt-1">
                     {profile?.bio || 'Building scalable web systems & machine learning architectures'}
                   </p>
                 </div>
               </div>
 
-              {/* View GitHub Profile Link */}
+              {/* View GitHub Profile Link (Electric Lime Button) */}
               <a
                 href={profileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-md shadow-blue-600/20 transition-all duration-200 hover:-translate-y-0.5 shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#c6f432] hover:bg-[#b5e526] text-[#0b0b0c] text-xs font-bold shadow-md hover:shadow-[0_0_20px_rgba(198,244,50,0.35)] transition-all duration-200 hover:-translate-y-0.5 shrink-0"
               >
-                <GithubIcon className="w-4 h-4" />
+                <GithubIcon className="w-4 h-4 text-[#0b0b0c]" />
                 <span>Visit Profile</span>
                 <ExternalLink className="w-3.5 h-3.5 opacity-80" />
               </a>
@@ -112,43 +112,43 @@ export default function GitHub() {
 
             {/* Profile Statistics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 relative z-10">
-              <div className="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80 text-center">
-                <span className="text-slate-400 text-xs font-mono block mb-1">REPOSITORIES</span>
-                <span className="text-2xl font-bold font-heading text-cyan-300">
+              <div className="bg-[#141416] p-4 rounded-2xl border border-zinc-800 text-center">
+                <span className="text-zinc-500 text-xs font-mono block mb-1">REPOSITORIES</span>
+                <span className="text-2xl font-bold font-heading text-[#c6f432]">
                   {loading ? '...' : (profile?.public_repos ?? '4+')}
                 </span>
-                <span className="text-[10px] text-slate-400 block mt-0.5">Public Repos</span>
+                <span className="text-[10px] text-zinc-500 block mt-0.5">Public Repos</span>
               </div>
 
-              <div className="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80 text-center">
-                <span className="text-slate-400 text-xs font-mono block mb-1">FOLLOWERS</span>
+              <div className="bg-[#141416] p-4 rounded-2xl border border-zinc-800 text-center">
+                <span className="text-zinc-500 text-xs font-mono block mb-1">FOLLOWERS</span>
                 <span className="text-2xl font-bold font-heading text-white">
                   {loading ? '...' : (profile?.followers ?? '—')}
                 </span>
-                <span className="text-[10px] text-slate-400 block mt-0.5">Engineers & Peers</span>
+                <span className="text-[10px] text-zinc-500 block mt-0.5">Engineers & Peers</span>
               </div>
 
-              <div className="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80 text-center">
-                <span className="text-slate-400 text-xs font-mono block mb-1">FOLLOWING</span>
+              <div className="bg-[#141416] p-4 rounded-2xl border border-zinc-800 text-center">
+                <span className="text-zinc-500 text-xs font-mono block mb-1">FOLLOWING</span>
                 <span className="text-2xl font-bold font-heading text-white">
                   {loading ? '...' : (profile?.following ?? '—')}
                 </span>
-                <span className="text-[10px] text-slate-400 block mt-0.5">Following</span>
+                <span className="text-[10px] text-zinc-500 block mt-0.5">Following</span>
               </div>
 
-              <div className="bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80 text-center">
-                <span className="text-slate-400 text-xs font-mono block mb-1">GISTS / SNIPPETS</span>
-                <span className="text-2xl font-bold font-heading text-emerald-400">
+              <div className="bg-[#141416] p-4 rounded-2xl border border-zinc-800 text-center">
+                <span className="text-zinc-500 text-xs font-mono block mb-1">GISTS / SNIPPETS</span>
+                <span className="text-2xl font-bold font-heading text-[#c6f432]">
                   {loading ? '...' : (profile?.public_gists ?? '0')}
                 </span>
-                <span className="text-[10px] text-slate-400 block mt-0.5">Public Gists</span>
+                <span className="text-[10px] text-zinc-500 block mt-0.5">Public Gists</span>
               </div>
             </div>
 
             {/* Error or Rate-limit Notice */}
             {error && (
-              <div className="mt-6 p-3 rounded-xl bg-amber-950/40 border border-amber-800/50 flex items-center gap-2.5 text-xs text-amber-300">
-                <AlertCircle className="w-4 h-4 shrink-0 text-amber-400" />
+              <div className="mt-6 p-3 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center gap-2.5 text-xs text-zinc-400">
+                <AlertCircle className="w-4 h-4 shrink-0 text-[#c6f432]" />
                 <span>
                   {error} — Configure your confirmed GitHub username in <code>src/data/personal.js</code>.
                 </span>
@@ -157,25 +157,25 @@ export default function GitHub() {
           </div>
 
           {/* Contribution Heatmap Card */}
-          <div className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-4 border-b border-slate-200">
+          <div className="bg-zinc-50 rounded-2xl p-6 sm:p-8 border border-zinc-200">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-4 border-b border-zinc-200">
               <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-blue-600" />
-                <h4 className="font-heading font-bold text-slate-900 text-base">
+                <Calendar className="w-5 h-5 text-[#0b0b0c]" />
+                <h4 className="font-heading font-bold text-[#0b0b0c] text-base">
                   Annual Contribution Calendar
                 </h4>
               </div>
-              <span className="text-xs text-slate-500 font-mono">
+              <span className="text-xs text-zinc-500 font-mono">
                 Direct sync with GitHub activity
               </span>
             </div>
 
-            {/* Embedded GitHub Contribution Chart */}
+            {/* Embedded GitHub Contribution Chart (Electric Lime Theme) */}
             <div className="overflow-x-auto pb-2">
-              <div className="min-w-[650px] flex justify-center bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs">
+              <div className="min-w-[650px] flex justify-center bg-white p-4 rounded-xl border border-zinc-200 shadow-xs">
                 {username ? (
                   <img
-                    src={`https://ghchart.rshah.org/3B82F6/${encodeURIComponent(username)}`}
+                    src={`https://ghchart.rshah.org/c6f432/${encodeURIComponent(username)}`}
                     alt={`${username}'s GitHub contribution calendar`}
                     className="w-full max-w-full h-auto"
                     loading="lazy"
@@ -192,24 +192,24 @@ export default function GitHub() {
                   id="gh-chart-fallback"
                   className={`${username ? 'hidden' : 'block'} text-center py-8 space-y-2`}
                 >
-                  <GithubIcon className="w-8 h-8 text-slate-400 mx-auto" />
-                  <p className="text-sm font-medium text-slate-700">
+                  <GithubIcon className="w-8 h-8 text-zinc-400 mx-auto" />
+                  <p className="text-sm font-medium text-zinc-700">
                     Contribution activity ready for live connection
                   </p>
-                  <p className="text-xs text-slate-400 font-mono">
+                  <p className="text-xs text-zinc-400 font-mono">
                     Set your confirmed GitHub username in <code>src/data/personal.js</code>
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[11px] text-slate-400 mt-4 font-mono">
+            <div className="flex items-center justify-between text-[11px] text-zinc-400 mt-4 font-mono">
               <span>Less activity</span>
               <div className="flex items-center gap-1">
-                <span className="w-2.5 h-2.5 rounded-xs bg-slate-200" />
-                <span className="w-2.5 h-2.5 rounded-xs bg-blue-200" />
-                <span className="w-2.5 h-2.5 rounded-xs bg-blue-400" />
-                <span className="w-2.5 h-2.5 rounded-xs bg-blue-600" />
+                <span className="w-2.5 h-2.5 rounded-xs bg-zinc-200" />
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#c6f432]/40" />
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#c6f432]/75" />
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#c6f432]" />
               </div>
               <span>More activity</span>
             </div>

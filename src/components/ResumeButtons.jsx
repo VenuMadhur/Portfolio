@@ -17,19 +17,15 @@ export default function ResumeButtons({ variant = 'hero' }) {
   return (
     <>
       <div className="flex flex-wrap items-center gap-3">
-        {/* View Resume Button */}
+        {/* View Resume Button (Lime Green Primary) */}
         {personalData.viewResumeUrl ? (
           <a
             href={personalData.viewResumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
-              isHero
-                ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-500/25 hover:shadow-blue-500/35 hover:-translate-y-0.5'
-                : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/20'
-            }`}
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm bg-[#c6f432] hover:bg-[#b5e526] text-[#0b0b0c] transition-all duration-200 shadow-sm hover:shadow-[0_0_20px_rgba(198,244,50,0.35)] hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#c6f432]"
           >
-            <FileText className="w-4 h-4" />
+            <FileText className="w-4 h-4 text-[#0b0b0c]" />
             <span>View Resume</span>
             <ExternalLink className="w-3.5 h-3.5 opacity-80" />
           </a>
@@ -37,14 +33,10 @@ export default function ResumeButtons({ variant = 'hero' }) {
           <button
             type="button"
             onClick={handleViewResume}
-            className={`inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer ${
-              isHero
-                ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-500/25 hover:shadow-blue-500/35 hover:-translate-y-0.5'
-                : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/20'
-            }`}
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm bg-[#c6f432] hover:bg-[#b5e526] text-[#0b0b0c] transition-all duration-200 shadow-sm hover:shadow-[0_0_20px_rgba(198,244,50,0.35)] hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#c6f432] cursor-pointer"
             title="View online resume"
           >
-            <FileText className="w-4 h-4" />
+            <FileText className="w-4 h-4 text-[#0b0b0c]" />
             <span>View Resume</span>
             <ExternalLink className="w-3.5 h-3.5 opacity-80" />
           </button>
@@ -54,14 +46,14 @@ export default function ResumeButtons({ variant = 'hero' }) {
         <a
           href={personalData.downloadResumePath}
           download="Cholletti-Venu-Madhur-Resume.pdf"
-          className={`inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+          className={`inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 border focus:outline-none focus:ring-2 focus:ring-[#c6f432] ${
             isHero
-              ? 'border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white bg-slate-900/60 hover:bg-slate-800/80 hover:-translate-y-0.5'
-              : 'border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 bg-white hover:bg-slate-50'
+              ? 'border-zinc-800 hover:border-zinc-600 text-zinc-200 hover:text-white bg-zinc-900/80 hover:bg-zinc-800/90 hover:-translate-y-0.5'
+              : 'border-zinc-300 hover:border-zinc-400 text-zinc-800 hover:text-[#0b0b0c] bg-white hover:bg-zinc-50'
           }`}
           title="Download resume PDF"
         >
-          <Download className="w-4 h-4 text-cyan-400" />
+          <Download className="w-4 h-4 text-[#c6f432]" />
           <span>Download PDF</span>
         </a>
       </div>
@@ -72,30 +64,30 @@ export default function ResumeButtons({ variant = 'hero' }) {
           role="dialog"
           aria-modal="true"
           aria-labelledby="drive-notice-title"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xs"
         >
-          <div className="bg-slate-900 border border-slate-800 text-white p-6 rounded-2xl max-w-md w-full shadow-2xl relative animate-in fade-in zoom-in-95 duration-150">
+          <div className="bg-[#0b0b0c] border border-zinc-800 text-white p-6 sm:p-7 rounded-2xl max-w-md w-full shadow-2xl relative animate-in fade-in zoom-in-95 duration-150">
             <button
               onClick={() => setShowDriveNotice(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="absolute top-4 right-4 text-zinc-400 hover:text-white p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c6f432]"
               aria-label="Close notification"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="flex items-start gap-3.5 mb-4">
-              <div className="p-2.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shrink-0">
-                <AlertCircle className="w-5 h-5" />
+              <div className="p-2.5 rounded-xl bg-zinc-900 border border-[#c6f432]/30 text-[#c6f432] shrink-0">
+                <AlertCircle className="w-5 h-5 text-[#c6f432]" />
               </div>
               <div>
-                <h3 id="drive-notice-title" className="text-lg font-semibold text-white">
+                <h3 id="drive-notice-title" className="font-heading text-lg font-bold text-white">
                   Google Drive Link Configuration
                 </h3>
-                <p className="text-xs text-slate-400 mt-0.5">Editable in src/data/personal.js</p>
+                <p className="text-xs text-zinc-400 mt-0.5">Editable in src/data/personal.js</p>
               </div>
             </div>
 
-            <p className="text-sm text-slate-300 leading-relaxed mb-5">
+            <p className="text-sm text-zinc-300 leading-relaxed mb-6">
               The Google Drive PDF preview link is currently set as an editable placeholder.
               In the meantime, you can directly download the local resume asset using the button below.
             </p>
@@ -104,7 +96,7 @@ export default function ResumeButtons({ variant = 'hero' }) {
               <button
                 type="button"
                 onClick={() => setShowDriveNotice(false)}
-                className="px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+                className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors cursor-pointer"
               >
                 Dismiss
               </button>
@@ -112,7 +104,7 @@ export default function ResumeButtons({ variant = 'hero' }) {
                 href={personalData.downloadResumePath}
                 download="Cholletti-Venu-Madhur-Resume.pdf"
                 onClick={() => setShowDriveNotice(false)}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#c6f432] hover:bg-[#b5e526] text-[#0b0b0c] text-sm font-bold rounded-lg transition-colors shadow-sm"
               >
                 <Download className="w-4 h-4" />
                 <span>Download Resume</span>

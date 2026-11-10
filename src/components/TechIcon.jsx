@@ -154,20 +154,20 @@ export default function TechIcon({ name, className = "w-6 h-6" }) {
         </svg>
       );
     case 'api':
-      return <Workflow className={`${className} text-blue-600`} />;
+      return <Workflow className={`${className} text-[#0b0b0c]`} />;
     case 'shield':
     case 'opacus':
-      return <Shield className={`${className} text-emerald-600`} />;
+      return <Shield className={`${className} text-[#0b0b0c]`} />;
     case 'brain':
     case 'machine learning':
-      return <Brain className={`${className} text-purple-600`} />;
+      return <Brain className={`${className} text-[#0b0b0c]`} />;
     case 'network':
     case 'federated learning':
-      return <Network className={`${className} text-cyan-600`} />;
+      return <Network className={`${className} text-[#0b0b0c]`} />;
     case 'database':
     case 'sql':
-      return <Database className={`${className} text-blue-700`} />;
+      return <Database className={`${className} text-[#0b0b0c]`} />;
     default:
-      return <Code className={`${className} text-slate-700`} />;
+      return <Code className={`${className} text-[#0b0b0c]`} />;
   }
 }

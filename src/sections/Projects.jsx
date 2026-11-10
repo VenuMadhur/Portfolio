@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, ChevronUp, FolderGit2, Sparkles } from 'lucide-react';
+import { ChevronDown, ChevronUp, FolderGit2 } from 'lucide-react';
 import { projectsData } from '../data/projects';
 import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
@@ -15,7 +14,7 @@ export default function Projects() {
   const displayedProjects = showAll ? projectsData : initialProjects;
 
   return (
-    <section id="projects" className="py-24 bg-[#F8FAFC] text-slate-900 border-t border-slate-200">
+    <section id="projects" className="py-24 bg-[#f9f9fb] text-[#0b0b0c] border-t border-zinc-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -27,7 +26,7 @@ export default function Projects() {
           dark={false}
         />
 
-        {/* Projects Grid */}
+        {/* Projects Grid with Dark Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProjects.map((project) => (
             <div key={project.id} className="h-full">
@@ -42,9 +41,9 @@ export default function Projects() {
             <button
               type="button"
               onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 hover:text-blue-600 font-semibold text-sm border border-slate-300 hover:border-blue-400 shadow-sm transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#0b0b0c] hover:bg-zinc-900 text-white hover:text-[#c6f432] font-bold text-sm border border-zinc-800 shadow-md transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#c6f432] cursor-pointer"
             >
-              <FolderGit2 className="w-4 h-4 text-blue-600" />
+              <FolderGit2 className="w-4 h-4 text-[#c6f432]" />
               <span>
                 {showAll
                   ? 'Show Less Projects'
@@ -56,7 +55,7 @@ export default function Projects() {
                 <ChevronDown className="w-4 h-4" />
               )}
             </button>
-            <p className="text-xs text-slate-400 mt-2 font-mono">
+            <p className="text-xs text-zinc-500 mt-2 font-mono">
               Additional projects can be registered in src/data/projects.js
             </p>
           </div>

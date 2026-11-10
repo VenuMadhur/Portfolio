@@ -4,23 +4,28 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --color-navy-dark: #08111F;
-  --color-navy-card: #101D31;
-  --color-navy-border: #1E293B;
-  --color-electric: #3B82F6;
-  --color-cyan-glow: #22D3EE;
+  /* Official Brand Palette: 40% Black, 40% White, 20% Electric Lime */
+  --color-brand-black: #0b0b0c;
+  --color-brand-surface: #121214;
+  --color-brand-card: #18181b;
+  --color-brand-border: #27272a;
   
-  --color-light-bg: #F8FAFC;
-  --color-light-surface: #FFFFFF;
-  --color-light-text: #0F172A;
-  --color-light-muted: #64748B;
-  --color-light-border: #E2E8F0;
+  --color-brand-white: #ffffff;
+  --color-brand-light-surface: #f9f9fb;
+  --color-brand-light-border: #e4e4e7;
+  --color-brand-muted: #71717a;
+
+  --color-lime-primary: #c6f432;
+  --color-lime-hover: #b5e526;
+  --color-lime-glow: rgba(198, 244, 50, 0.25);
+  --color-lime-subtle: rgba(198, 244, 50, 0.08);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+    background-color: #0b0b0c;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -37,44 +42,54 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 }
 
-/* Modern Form Validation Feedback according to Modern Web Guidance */
+/* Modern Form Validation Feedback */
 input:user-invalid,
 textarea:user-invalid {
-  border-color: #EF4444 !important;
-  background-color: #FEF2F2;
+  border-color: #ef4444 !important;
+  background-color: #fef2f2;
 }
 
 input:user-valid:not(:placeholder-shown),
 textarea:user-valid:not(:placeholder-shown) {
-  border-color: #10B981;
+  border-color: #c6f432;
 }
 
-/* Subtle background dot pattern for the Hero */
-.bg-grid-pattern {
-  background-size: 32px 32px;
+/* Subtle background dot/grid pattern for Dark Sections */
+.bg-grid-dark {
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
 
-.bg-radial-glow {
-  background: radial-gradient(circle 600px at 50% 10%, rgba(59, 130, 246, 0.15), transparent 70%);
+/* Subtle background dot/grid pattern for Light Sections */
+.bg-grid-light {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 11, 12, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 11, 12, 0.03) 1px, transparent 1px);
 }
 
-/* Glassmorphism utility classes */
-.glass-panel {
-  background: rgba(16, 29, 49, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Lime Glow Utility */
+.bg-lime-glow {
+  background: radial-gradient(circle 500px at 50% 15%, rgba(198, 244, 50, 0.12), transparent 70%);
 }
 
+.glow-lime {
+  box-shadow: 0 0 25px rgba(198, 244, 50, 0.22);
+}
+
+.glow-lime-sm {
+  box-shadow: 0 0 15px rgba(198, 244, 50, 0.15);
+}
+
+/* Navigation blur surface */
 .glass-nav {
-  background: rgba(8, 17, 31, 0.85);
+  background: rgba(11, 11, 12, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
