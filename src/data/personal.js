@@ -42,7 +42,8 @@ export const personalData = {
   // Resume configuration
   // viewResumeUrl: Google Drive shareable link (e.g. https://drive.google.com/file/d/.../view?usp=sharing)
   // downloadResumePath: local PDF placed in the /public folder
-  viewResumeUrl: "", // Paste your Google Drive PDF URL here
+  viewResumeUrl:
+    "https://drive.google.com/file/d/1PwLzxRqiWfEDwwQyb43vuWE6LHhaaCL8/view?usp=sharing", // Paste your Google Drive PDF URL here
   downloadResumePath: "/Cholletti-Venu-Madhur-Resume.pdf",
 
   // Profile photo path in /public (e.g. "/images/profile.jpg")
